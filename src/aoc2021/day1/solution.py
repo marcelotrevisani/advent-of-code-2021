@@ -5,7 +5,7 @@ def solve(input_list, slice_window=1):
     count = 0
     ref = sum(input_list[0:slice_window])
     for pos, num in enumerate(input_list[1:], start=1):
-        num = sum(input_list[pos:pos + slice_window])
+        num = sum(input_list[pos : pos + slice_window])
         if num > ref:
             count += 1
         ref = num

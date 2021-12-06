@@ -52,7 +52,11 @@ class Node:
     one: "Node" = None
 
     def __ge__(self, other: "Node"):
-        return self.weight > other.weight or self.weight == other.weight and self.value == 0
+        return (
+            self.weight > other.weight
+            or self.weight == other.weight
+            and self.value == 0
+        )
 
 
 def solve2(input_list):
